@@ -18,14 +18,13 @@ public class Main {
         ArrayList<ArrayList<Point>> galleries = createGalleries(br);
 
         for (ArrayList<Point> g : galleries) {
-
             g = this.grahamScan(g);
 
-            for (Point p : g) {
-                System.out.println(p.toString());
-            }
+            // for (Point p : g) {
+            //     System.out.println(p.toString());
+            // }
 
-            System.out.println("----------------------------------");
+            // System.out.println("----------------------------------");
         }
     }
 
@@ -38,18 +37,16 @@ public class Main {
 
         for (int i = 2; i < gallery.size(); i++) {
             supSide.push(gallery.get(i));
-            System.out.println(i);
             while ((supSide.size() > 2) && this.CCW(supSide.get(supSide.size() - 3), supSide.get(supSide.size() - 2), supSide.peek())) {
-                System.out.println(supSide.get(supSide.size() - 3) + " " + supSide.get(supSide.size() - 2) + " " + supSide.peek());
                 supSide.remove(supSide.size() - 2);
             }
         }
-        System.out.println("----------------------------------");
-        System.out.println("SUP");
-        for (Point p : supSide) {
-            System.out.println(p.toString());
-        }
-        System.out.println("----------------------------------");
+        // System.out.println("----------------------------------");
+        // System.out.println("SUP");
+        // for (Point p : supSide) {
+        //     System.out.println(p.toString());
+        // }
+        // System.out.println("----------------------------------");
 
         Stack<Point> infSide = new Stack<>();
         infSide.push(gallery.get(gallery.size() - 1));
@@ -63,12 +60,12 @@ public class Main {
             }
         }
 
-        System.out.println("----------------------------------");
-        System.out.println("INF");
-        for (Point p : infSide) {
-            System.out.println(p.toString());
-        }
-        System.out.println("----------------------------------");
+        // System.out.println("----------------------------------");
+        // System.out.println("INF");
+        // for (Point p : infSide) {
+        //     System.out.println(p.toString());
+        // }
+        // System.out.println("----------------------------------");
 
         supSide.pop();
         infSide.pop();
@@ -106,8 +103,8 @@ public class Main {
 
             ArrayList<ArrayList<Point>> galleries = new ArrayList<>();
 
-            System.out.println("Iniciando programa!");
-            System.out.println("Tamanho:");
+            // System.out.println("Iniciando programa!");
+            // System.out.println("Tamanho:");
             while ((line = reader.readLine()) != null && !line.equalsIgnoreCase("0")) {
                 String[] content = line.split(" ");
 
@@ -126,9 +123,9 @@ public class Main {
                 iterationsLeft--;
                 index++;
 
-                if (iterationsLeft == 0) {
-                    System.out.println("Tamanho:");
-                }
+                // if (iterationsLeft == 0) {
+                //     System.out.println("Tamanho:");
+                // }
             }
 
 
